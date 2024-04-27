@@ -37,7 +37,7 @@
         &kp ASTRK   &kp Q    &kp W    &kp E    &kp R      &kp T  &kp DEL                                                            &kp AMPS  &kp Y       &kp U         &kp I         &kp O      &kp P    &kp F12
         &kp MINUS   &kp A    &kp S    &kp D    &kp F      &kp G  &kp GRAVE          &kp LCTRL &kp LALT &kp HOME &kp RSHFT           &kp EQUAL &kp H       &kp J         &kp K         &kp L      &kp SEMI &kp SQT
         &none       &kp Z    &kp X    &kp C    &kp V      &kp B                            &kp PG_DN  &kp END                                 &kp N       &kp M         &kp COMMA     &kp DOT    &kp FSLH &kp NON_US_BACKSLASH
-        &kp LG(RIGHT) &kp LG(LEFT) &kp LG(DOT) &kp LG(LALT) &kp LGUI   &kp SPACE &kp BSPC   &kp PG_DN  &kp LALT &kp RC(ESC) &kp ENTER                      &kp LG(TAB)   &kp LC(LSHFT) &kp LBKT   &kp RBKT &mo 2
+        &kp LG(RIGHT) &kp LG(LEFT) &kp LG(DOT) &kp LG(LALT) &kp LGUI   &lt (1, SPACE) &kp BSPC   &kp PG_DN  &kp LALT &kp RC(ESC) &lt (2,ENTER)                      &kp LG(TAB)   &kp LC(LSHFT) &kp LBKT   &kp RBKT &mo 2
       >;
     };
     keypad {
