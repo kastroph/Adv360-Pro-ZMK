@@ -5,7 +5,6 @@
 #include <dt-bindings/zmk/backlight.h>
 
 
-#define AS(keycode) &as LS(keycode) keycode
 
 / {
     behaviors {
@@ -30,14 +29,7 @@
           bindings = <&kp>, <&kp>;
       };
 
-          as: auto_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping_term_ms = <135>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
+       
 
     };
 
@@ -49,10 +41,10 @@
 
     default_layer {
       bindings = <
-        &none     &kp F1    &kp F2   &kp F3   &kp F4     &kp F5 &none                                                           &kp LA(PSCRN)  &kp F6      &kp F7        &kp F8        &kp F9     &kp F10  &kp F11
-        &kp ASTRK   AS(Q)     AS(W)    AS(E)    AS(R)      AS(T)  &kp DEL                                                            &kp AMPS  AS(Y)       AS(U)         AS(I)         AS(O)      AS(P)    &kp F12
-        &kp MINUS   AS(A)     AS(S)    AS(D)    AS(F)      AS(G)  &kp GRAVE          &kp LCTRL &kp LALT &kp HOME &kp RSHFT           &kp EQUAL AS(H)       AS(J)         AS(K)         AS(L)      &kp SEMI &kp SQT
-        &none       AS(Z)     AS(X)    AS(C)    AS(V)      AS(B)                            &kp PG_DN  &kp END                                 AS(N)       AS(M)         &kp COMMA     &kp DOT    &kp FSLH &kp NON_US_BACKSLASH
+        &none     &kp F1    &kp F2   &kp F3   &kp F4     &kp F5 &none                                                           &kp LA(PSCRN)  &kp F6      &kp F7        &kp F8        &kp F9     &kp F10 &kp F11
+        &kp ASTRK   &kp Q    &kp W    &kp E    &kp R      &kp T  &kp DEL                                                            &kp AMPS  &kp Y       &kp U         &kp I         &kp O      &kp P    &kp F12
+        &kp MINUS   &kp A    &kp S    &kp D    &kp F      &kp G  &kp GRAVE          &kp LCTRL &kp LALT &kp HOME &kp RSHFT           &kp EQUAL &kp H       &kp J         &kp K         &kp L      &kp SEMI &kp SQT
+        &none       &kp Z    &kp X    &kp C    &kp V      &kp B                            &kp PG_DN  &kp END                                 &kp N       &kp M         &kp COMMA     &kp DOT    &kp FSLH &kp NON_US_BACKSLASH
         &kp LG(RIGHT) &kp LG(LEFT) &kp LG(DOT) &kp LG(LALT) &kp LGUI   &kp SPACE &kp BSPC   &kp PG_DN  &kp LALT &kp RC(ESC) &Kp ENTER                      &kp LG(TAB)   &kp LC(LSHFT) &kp LBKT   &kp RBKT &mo 2
       >;
     };
