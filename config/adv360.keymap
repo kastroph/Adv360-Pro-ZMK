@@ -37,6 +37,16 @@
           bindings = <&kp>, <&kp>;
       };
 
+       pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+        };
+
       as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -54,11 +64,11 @@
 
     default_layer {
         bindings = <
-        &none     &kp F1    &kp F2   &kp F3   &kp F4     &kp F5 &none                                                           &kp LA(PSCRN)  &kp F6      &kp F7        &kp F8        &kp F9     &kp F10 &kp F11
+        &none     &kp F1    &kp F2   &kp F3   &kp F4     &kp F5  &mo 3                                                          &kp LA(PSCRN)  &kp F6      &kp F7        &kp F8        &kp F9     &kp F10 &kp F11
         &kp ASTRK   AS(Q)    AS(W)    AS(E)    AS(R)      AS(T)  &kp DEL                                                        &kp AMPS       AS(Y)       AS(U)         AS(I)         AS(O)      AS(P)    &kp F12
-        &kp MINUS   AS(A)    AS(S)    AS(D)    AS(F)      AS(G)  &kp GRAVE          &kp LCTRL   &kp LALT  &kp PG_DN &kp PG_UP &kp EQUAL      AS(H)       AS(J)         AS(K)         AS(L)      &kp SEMI &kp SQT
-        &caps_word  AS(Z)    AS(X)    AS(C)    AS(V)      AS(B)                                  &kp LSHFT &kp RSHFT                          AS(N)       AS(M)         &kp COMMA     &kp DOT    &kp FSLH &kp NON_US_BACKSLASH
-        &kp LG(RIGHT) &kp LG(LEFT) &kp LG(DOT) &kp LG(LALT) &kp LGUI   &lt LOWER SPACE &kp BSPC  &kp TAB   &kp LALT &kp RC(ESC) &lt RAISE ENTER    &kp LG(TAB)   &kp LC(LSHFT) &kp LBKT   &kp RBKT &mo 2
+        AS MINUS   AS(A)    AS(S)    AS(D)    AS(F)      AS(G)  &kp GRAVE          &kp LCTRL   &kp LALT  &kp PG_DN &kp PG_UP   AS EQUAL      AS(H)        AS(J)           AS(K)        AS(L)      AS SEMI AS SQT
+        &caps_word  AS(Z)    AS(X)    AS(C)    AS(V)      AS(B)                                  &kp LSHFT &kp RSHFT                          AS(N)       AS(M)          AS COMMA     AS DOT    AS FSLH AS NON_US_BACKSLASH
+        &kp LG(RIGHT) &kp LG(LEFT) &kp LG(DOT) &kp LG(LALT) &kp LGUI   &lt LOWER SPACE &kp BSPC  &kp TAB   &kp LALT &pht LCTRL ESC &lt RAISE ENTER    &kp LG(TAB)   &kp LC(LSHFT) &kp LBKT   &kp RBKT &mo 2
       >;
     };
     keypad {
