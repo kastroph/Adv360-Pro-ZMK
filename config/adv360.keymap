@@ -85,7 +85,7 @@
         &to 0 &none       &none      &none      &none     &none &none                                                  &none     &none    &none    &none    &none      &none   &none
         &to 1 &none       &none      &none      &none     &none &none                                                  &kp PG_UP &none    &none    &kp UP   &none      &none   &none
         &to 2 &none       &kp LALT   &kp LSHFT  &kp LCTRL &none &none              &trans &trans &trans &trans         &kp PG_DN &kp HOME &kp LEFT &kp DOWN &kp RIGHT  &kp END &none
-        &to 3 &none       &kp K_CUT  &kp K_COPY &kp K_PAST &none                          &trans &trans                           &none    &none    &none    &none      &none   &none
+        &none &none       &kp K_CUT  &kp K_COPY &kp K_PAST &none                          &trans &trans                           &none    &none    &none    &none      &none   &none
         &to 4 &none       &none      &none       &none                     &trans &trans &trans &trans &trans &trans                      &none    &none    &none      &none   &none
       >;
     };
