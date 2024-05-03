@@ -76,8 +76,8 @@
         &to 0   &kp N1          &kp N2   &kp N3   &none      &none    &none                                                         &none &none    &none   &none     &none      &kp KP_MULTIPLY &kp MINUS
         &to 1   &kp EXCL        &kp AT   &kp LBRC &kp RBRC   &kp PIPE  &trans                                                         &none &none  &kp N7  &kp N8    &kp N9     &kp KP_MINUS    &kp BSLH
         &to 2   &kp NON_US_HASH &kp DLLR &kp LPAR &kp RPAR   &kp GRAVE &trans        &trans &trans  &trans  &trans                    &none &none  &kp N4  &kp N5    &kp N6     &kp KP_PLUS     &kp SQT
-        &to 3   &kp PRCNT       &kp CARET &kp LBKT &kp RBKT  &kp TILDE2                    &trans  &trans                             &none &none  &kp N1  &kp N2    &kp N3     &kp ENTER
-        &to 4   &trans          &trans   &trans   &trans                   &trans &trans   &trans  &trans &trans &trans                     &trans &kp KP_N0  &kp KP_DOT     &none    &none
+        &to 3   &kp PRCNT       &kp CARET &kp LBKT &kp RBKT  &kp TILDE2                    &trans  &trans                                   &none  &kp N1  &kp N2     &kp N3    &kp ENTER     &kp none
+        &to 4   &trans          &trans   &trans   &trans                   &trans &trans   &trans  &trans &trans &trans                            &kp N0   &none     &kp KP_DOT     &none    &none
       >;
     };
     fn {
@@ -85,7 +85,7 @@
         &to 0 &none       &none      &none      &none     &none &none                                                  &none     &none    &none    &none    &none      &none   &none
         &to 1 &none       &none      &none      &none     &none &none                                                  &kp PG_UP &none    &none    &kp UP   &none      &none   &none
         &to 2 &none       &kp LALT   &kp LSHFT  &kp LCTRL &none &none              &trans &trans &trans &trans         &kp PG_DN &kp HOME &kp LEFT &kp DOWN &kp RIGHT  &kp END &none
-        &none &none       &none      &none       &none    &none                          &trans &trans                           &none    &none    &none    &none      &none   &none
+        &none &none       &kp LC(X)  &kp LC(C)  &kp LC(V)    &none                          &trans &trans                           &none    &none    &none    &none      &none   &none
         &to 4 &none       &none      &none       &none                     &trans &trans &trans &trans &trans &trans                      &none    &none    &none      &none   &none
       >;
     };
