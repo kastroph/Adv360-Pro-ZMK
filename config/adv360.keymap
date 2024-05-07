@@ -76,7 +76,7 @@
       bindings = <
         &to 0   &kp N1          &kp N2   &kp N3   &none      &none    &none                                                         &none &none    &none   &none     &none      &kp KP_MULTIPLY &kp MINUS
         &to 1   &kp EXCL        &kp AT   &kp LBRC &kp RBRC   &kp PIPE  &trans                                                         &none &none  &kp N7  &kp N8    &kp N9     &kp KP_MINUS    &kp BSLH
-        &to 2   &kp NON_US_HASH &kp DLLR &kp LPAR &kp RPAR   &kp GRAVE &trans        &trans &trans  &trans  &trans                    &none &none  &kp N4  &kp N5    &kp N6     &kp KP_PLUS     &kp SQT
+        &to 2   &kp HASH &kp DLLR &kp LPAR &kp RPAR   &kp GRAVE &trans        &trans &trans  &trans  &trans                    &none &none  &kp N4  &kp N5    &kp N6     &kp KP_PLUS     &kp SQT
         &to 3   &kp PRCNT       &kp CARET &kp LBKT &kp RBKT  &kp TILDE2                    &trans  &trans                                   &none  &kp N1  &kp N2     &kp N3    &kp ENTER      &none
         &to 4   &trans          &trans   &trans   &trans                   &trans &trans   &trans  &trans &trans &trans                            &kp N0   &none     &kp KP_DOT     &none    &none
       >;
