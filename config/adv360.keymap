@@ -43,8 +43,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <200>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <160>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <1>;    // <---[[the W key]]
         };
@@ -79,7 +79,7 @@
         &to 1   &kp EXCL        &kp AT   &kp LBRC &kp RBRC   &kp PIPE  &trans                                                         &none &none  &kp N7  &kp N8    &kp N9     &kp KP_MINUS    &kp BSLH
         &to 2   &kp HASH &kp DLLR &kp LPAR &kp RPAR   &kp GRAVE &trans        &trans &trans  &trans  &trans                    &none &none  &kp N4  &kp N5    &kp N6     &kp KP_PLUS     &kp SQT
         &to 3   &kp PRCNT       &kp CARET &kp LBKT &kp RBKT  &kp TILDE2                    &trans  &trans                                   &none  &kp N1  &kp N2     &kp N3    &kp ENTER      &none
-        &to 4   &trans          &trans   &trans   &trans                   &trans &trans   &trans  &trans &trans &trans                            &kp N0   &none     &kp KP_DOT     &none    &none
+        &to 4   &trans          &trans   &trans   &trans                   &trans &trans   &trans  &trans &trans &trans                            &none   &kp N0     &kp KP_DOT     &none    &none
       >;
     };
     fn {
