@@ -84,8 +84,8 @@
     };
     fn {
       bindings = <
-        &to 0 &none       &none      &none      &none     &none &none                                                  &none     &none    &none    &none    &none      &none   &none
-        &to 1 &none       &none      &none      &none     &none &none                                                  &kp PG_UP &none    &none    &kp UP   &none      &none   &none
+        &to 0 &kp F1      &kp F2     &kp F3     &kp F4    &kp F5 &none                                                 &kp none  &kp F6   &kp F7   &kp F8   &kp F9     &kp F10 &kp F11
+        &to 1 &none       &none      &none      &none     &none &none                                                  &kp PG_UP &none    &none    &kp UP   &none      &none   &kp F12
         &to 2 &none       &kp LALT   &kp LSHFT  &kp LCTRL &none &none              &trans &trans &trans &trans         &kp PG_DN &kp HOME &kp LEFT &kp DOWN &kp RIGHT  &kp END &none
         &to 3 &none       &kp LC(X)  &kp LC(C)  &kp LC(V)    &none                          &trans &trans                           &none    &none    &none    &none      &none   &none
         &to 4 &none       &none      &none       &none                     &trans &trans &trans &trans &trans &trans                      &none    &none    &none      &none   &none
