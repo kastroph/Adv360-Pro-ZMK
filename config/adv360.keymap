@@ -68,7 +68,7 @@
 
         default_layer {
             bindings = <
-                &mo VS &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &mo MOD
+                &mo 5 &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &mo MOD
                 &kp LA(PSCRN)   &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
 
                 &kp ASTRK       AS(Q)      AS(W)      AS(E)      AS(R)      AS(T)     &kp DEL
