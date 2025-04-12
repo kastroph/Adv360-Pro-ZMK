@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define AS(keycode) &as LS(keycode) keycode     // AutoShift Macro
-#define PoundSymbol &kp RA(N4)
+
 
 #define DEFAULT 0
 #define LOWER   1
@@ -62,7 +62,7 @@
 
         default_layer {
             bindings = <
-                &kp PoundSymbol &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &mo MOD
+                &none &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &mo MOD
                 &kp LA(PSCRN)   &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
 
                 &kp ASTRK       AS(Q)      AS(W)      AS(E)      AS(R)      AS(T)     &kp DEL
@@ -77,7 +77,7 @@
                 AS(N)           AS(M)      AS(COMMA)  AS(DOT)    AS(FSLH)   AS(BACKSLASH)
 
                 &kp LG(RIGHT)   &kp LG(LEFT) &kp LG(DOT) &kp LA(SPACE) &kp LGUI
-                &lt LOWER SPACE   &kp BSPC    AS(TAB)     &kp LALT       &pht LCTRL ESC
+                &lt LOWER SPACE   &kp BSPC    &kp TAB     &kp LALT       &pht LCTRL ESC
                 &lt RAISE ENTER   &kp LG(TAB) &kp LC(LSHFT) &kp LBKT     &kp RBKT   &mo VS
             >;
         };
