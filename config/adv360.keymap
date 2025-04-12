@@ -25,7 +25,12 @@
 / {
     behaviors {
         #include "macros.dtsi"
-        #include "version.dtsi"
+        #include "version.dtsi"  
+        
+        unicode: unicode {
+             compatible = "zmk,behavior-unicode";
+             label = "UNICODE";
+        };
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -56,10 +61,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        uc: unicode {
-             compatible = "zmk,behavior-unicode";
-             label = "UNICODE";
-        };
+     
      pound_hold: pound_hold_behavior {
             compatible = "zmk,behavior-hold-tap";
             label = "POUND_HOLD";
