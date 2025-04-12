@@ -32,6 +32,12 @@
              label = "UNICODE";
         };
 
+           macro_pound: macro_pound {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&unicode 0x00A3>;
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -69,7 +75,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick_tap_ms = <175>;
-            bindings = <&kp DOLLAR>, <&unicode 0x00A3>;
+            bindings = <&kp DOLLAR>, <&macro_pound>;
         };
 
     };
