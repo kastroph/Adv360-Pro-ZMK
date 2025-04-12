@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define AS(keycode) &as LS(keycode) keycode     // AutoShift Macro
-#define PoundSymbol &kp UC(0x00A3)
+
 
 #define DEFAULT 0
 #define LOWER   1
@@ -55,15 +55,16 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-       pound_hold: pound_hold_behavior {
-                compatible = "zmk,behavior-hold-tap";
-                label = "POUND_HOLD";
-                #binding-cells = <0>;
-                flavor = "tap-preferred";
-                tapping-term-ms = <200>;
-                quick_tap_ms = <175>;
-                bindings = <&kp LS(N4)>, <&kp UC(0x00A3)>;
+      pound_hold: pound_hold_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "POUND_HOLD";
+             #binding-cells = <0>;
+             flavor = "tap-preferred";
+             tapping-term-ms = <200>;
+             quick_tap_ms = <175>;
+            bindings = <&kp DOLLAR>, <&kp UC(0x00A3)>;
 };
+
     };
 
     keymap {
