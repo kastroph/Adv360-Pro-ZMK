@@ -30,6 +30,7 @@
         unicode: unicode {
              compatible = "zmk,behavior-unicode";
              label = "UNICODE";
+             #binding-cells = <1>;
         };
 
            macro_pound: macro_pound {
