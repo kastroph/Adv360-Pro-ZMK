@@ -12,6 +12,7 @@
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
+#define VS  4
 #define PoundSybol RA(LS(N4))
 
 &lt {
@@ -64,7 +65,7 @@
         &kp ASTRK   AS(Q)    AS(W)    AS(E)    AS(R)      AS(T)  &kp DEL                                                        &kp AMPS       AS(Y)       AS(U)         AS(I)         AS(O)      AS(P)    &kp F12
         AS (MINUS)   AS(A)    AS(S)    AS(D)    AS(F)      AS(G) &mkp RCLK          &kp LCTRL   &kp LALT  &kp PG_DN &kp PG_UP   AS (EQUAL)     AS(H)        AS(J)           AS(K)        AS(L)      AS (SEMI) AS (SQT)
         &caps_word  AS(Z)    AS(X)    AS(C)    AS(V)      AS(B)                                  &kp LSHFT &kp RSHFT                          AS(N)       AS(M)          AS (COMMA)     AS (DOT)    AS (FSLH) AS (BACKSLASH)
-        &kp LG(RIGHT) &kp LG(LEFT) &kp LG(DOT) &kp LA(SPACE) &kp LGUI   &lt LOWER SPACE &kp BSPC  &kp TAB   &kp LALT &pht LCTRL ESC &lt RAISE ENTER    &kp LG(TAB)   &kp LC(LSHFT) &kp LBKT   &kp RBKT &mo 2
+        &kp LG(RIGHT) &kp LG(LEFT) &kp LG(DOT) &kp LA(SPACE) &kp LGUI   &lt LOWER SPACE &kp BSPC  AS(TAB)   &kp LALT &pht LCTRL ESC &lt RAISE ENTER    &kp LG(TAB)   &kp LC(LSHFT) &kp LBKT   &kp RBKT &mo VS
       >;
     };
     keypad {
@@ -106,6 +107,19 @@
         &kp LG(RIGHT) &kp LG(LEFT) &kp LG(DOT) &kp LG(LALT) &kp LGUI   &lt LOWER SPACE &kp BSPC  &kp TAB   &kp LALT &kp RC(ESC) &lt RAISE ENTER    &kp LG(TAB)   &kp LC(LSHFT) &kp LBKT   &kp RBKT &mo 2
       >;
     };
+    vs {
+    vs_shortcuts {
+    display-name = "VS";
+     bindings = <
+        &none     &kp F1    &kp F2   &kp F3   &kp F4     &kp F5  &mo 3                                                          &kp LA(PSCRN)  &kp F6      &kp F7        &kp F8        &kp F9     &kp F10 &kp F11
+        &kp LC(LA(F4))   &kp LC(F4)    &kp LA(F12)   &kp LC(F12)    &none   &none  &none                                                         &kp AMPS       AS(Y)       AS(U)         AS(I)         AS(O)      AS(P)    &kp F12
+        &none    &none     &kp F12    	&kp LC(F12)    &none      &none  &none           &none   &none  &none &&none    &none     AS(H)        AS(J)           AS(K)        AS(L)      AS (SEMI) AS (SQT)
+        &none   &none     &none     &none    &none      &none                                   &none &none                          AS(N)       AS(M)          AS (COMMA)     AS (DOT)    AS (FSLH) AS (BACKSLASH)
+        &none  &none     &none  &none  &none    &trans &none  &none   &none &trans &trans    &none   &none &none   &none &none
+  >;
+};
+    
+    }
     extra1 { 
       display-name = "Red";    
       status = "reserved";
