@@ -27,17 +27,7 @@
         #include "macros.dtsi"
         #include "version.dtsi"  
         
-        unicode: unicode {
-             compatible = "zmk,behavior-unicode";
-             label = "UNICODE";
-             #binding-cells = <1>;
-        };
 
-           macro_pound: macro_pound {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&unicode 0x00A3>;
-        };
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -69,15 +59,7 @@
         };
 
      
-     pound_hold: pound_hold_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "POUND_HOLD";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
-            bindings = <&kp DOLLAR>, <&macro_pound>;
-        };
+     
 
     };
 
@@ -115,7 +97,7 @@
                 &to LOWER     &kp EXCL   &kp AT   &kp LBRC &kp RBRC &kp PIPE  &trans
                 &none         &none     &kp N7   &kp N8   &kp N9   &kp KP_MINUS   &kp BSLH
 
-                &to RAISE     &kp HASH  &pound_hold &kp LPAR &kp RPAR &kp GRAVE &trans
+                &to RAISE     &kp HASH  &kp DOLLAR &kp LPAR &kp RPAR &kp GRAVE &trans
                 &trans        &trans    &trans   &trans   &none    &none     &kp N4
                 &kp N5        &kp N6    &kp KP_PLUS &kp SQT
 
