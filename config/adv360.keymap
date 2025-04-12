@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define AS(keycode) &as LS(keycode) keycode     // AutoShift Macro
-
+#define PoundSymbol &kp UC(0x00A3)
 
 #define DEFAULT 0
 #define LOWER   1
