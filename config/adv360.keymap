@@ -67,7 +67,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick_tap_ms = <175>;
-            bindings = <&kp DOLLAR>, <&uc 0x00A3>;
+            bindings = <&kp DOLLAR>, <&unicode 0x00A3>;
         };
 
     };
