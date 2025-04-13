@@ -40,68 +40,72 @@
             >;
         };
 
-          comment_macro: comment_macro {
+         comment_macro: comment_macro {
             compatible = "zmk,behavior-macro";
-            label = "Comment Macro";
             #binding-cells = <0>;
+            wait-ms = <50>;
+            tap-ms = <40>;
             bindings = <
-                &mt LCTRL K
-               
-                &mt LCTRL C
+                &macro_tap &kp LC(K)
+                &macro_tap &kp LC(C)
             >;
         };
 
-        uncomment_macro: uncomment_macro {
+          uncomment_macro: uncomment_macro {
             compatible = "zmk,behavior-macro";
-            label = "Uncomment Macro";
             #binding-cells = <0>;
+            wait-ms = <50>;
+            tap-ms = <40>;
             bindings = <
-                &mt LCTRL K
-             
-                &mt LCTRL U
+                &macro_tap &kp LC(K)
+                &macro_tap &kp LC(U)
             >;
         };
+          
         nav_back_macro: nav_back_macro {
             compatible = "zmk,behavior-macro";
-            label = "Navigate Back";
             #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <30>;
             bindings = <
-                &mt LCTRL MINUS
+                &macro_tap &kp LC(MINUS)
             >;
         };
 
         nav_forward_macro: nav_forward_macro {
             compatible = "zmk,behavior-macro";
-            label = "Navigate Forward";
             #binding-cells = <0>;
+            wait-ms = <50>;
+            tap-ms = <30>;
             bindings = <
-                &mt LSFT MINUS
-              
-                &mt LCTRL MINUS
+                &macro_tap &kp LC(LS(MINUS))
             >;
         };
+
 
         run_test_macro: run_test_macro {
             compatible = "zmk,behavior-macro";
-            label = "Run Test Macro";
             #binding-cells = <0>;
+            wait-ms = <50>;
+            tap-ms = <40>;
             bindings = <
-                &mt LCTRL R
-             
-                &mt LCTRL T
+                &macro_tap &kp LC(R)
+                &macro_tap &kp LC(T)
             >;
         };
 
+      
         debug_test_macro: debug_test_macro {
             compatible = "zmk,behavior-macro";
-            label = "Debug Test Macro";
             #binding-cells = <0>;
+            wait-ms = <50>;
+            tap-ms = <40>;
             bindings = <
-                &mt LCTRL R
-          
-                &mt LCTRL D
+                &macro_tap &kp LC(R)
+                &macro_tap &kp LC(D)
             >;
         };
+
         find_refs_macro: find_refs_macro {
             compatible = "zmk,behavior-macro";
             label = "Find All References";
@@ -111,29 +115,29 @@
             >;
         };
 
-        rename_macro: rename_macro {
+         rename_macro: rename_macro {
             compatible = "zmk,behavior-macro";
-            label = "Rename Symbol";
             #binding-cells = <0>;
+            wait-ms = <50>;
+            tap-ms = <40>;
             bindings = <
-                     &mt LCTRL R
-                     
-                     &mt LCTRL R
-                    >;
-                };
+                &macro_tap &kp LC(R)
+                &macro_tap &kp LC(R)
+            >;
+        };
 
     
 
-                format_doc_macro: format_doc_macro {
-                 compatible = "zmk,behavior-macro";
-                 label = "Format Document";
-                 #binding-cells = <0>;
-                  bindings = <
-                    &mt LCTRL K
-                
-                       &mt LCTRL D
-                      >;
-                    };
+            format_doc_macro: format_doc_macro {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <50>;
+    tap-ms = <40>;
+    bindings = <
+        &macro_tap &kp LC(K)
+        &macro_tap &kp LC(D)
+    >;
+    };
 
     };
 
