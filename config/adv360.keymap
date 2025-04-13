@@ -296,7 +296,7 @@
                 &none &none &none &none AS(H) &nav_back_macro &nav_forward_macro AS(L) AS(SEMI) AS(SQT)
 
                 &none &comment_macro &uncomment_macro  &none &format_doc_macro &none
-                &none &none AS(N) &none &none &none &none &none
+                &none &none &kp V &none &none &none &none &none
 
                 &none &none &none &none &none
                 &trans &none &none &none &trans &trans
