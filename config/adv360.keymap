@@ -32,6 +32,7 @@
         extract_method_macro: extract_method_macro {
             compatible = "zmk,behavior-macro";
             label = "Extract Method Macro";
+            #binding-cells = <0>;
             bindings = <
                 &mt LCTRL R
                 &mt LCTRL M
@@ -41,6 +42,7 @@
           comment_macro: comment_macro {
             compatible = "zmk,behavior-macro";
             label = "Comment Macro";
+            #binding-cells = <0>;
             bindings = <
                 &mt LCTRL K
                 &mt LCTRL C
@@ -50,6 +52,7 @@
         uncomment_macro: uncomment_macro {
             compatible = "zmk,behavior-macro";
             label = "Uncomment Macro";
+            #binding-cells = <0>;
             bindings = <
                 &mt LCTRL K
                 &mt LCTRL U
@@ -58,6 +61,7 @@
         nav_back_macro: nav_back_macro {
             compatible = "zmk,behavior-macro";
             label = "Navigate Back";
+            #binding-cells = <0>;
             bindings = <
                 &mt LCTRL MINUS
             >;
@@ -66,6 +70,7 @@
         nav_forward_macro: nav_forward_macro {
             compatible = "zmk,behavior-macro";
             label = "Navigate Forward";
+            #binding-cells = <0>;
             bindings = <
                 &mt LSFT MINUS
                 &mt LCTRL MINUS
@@ -75,6 +80,7 @@
         run_test_macro: run_test_macro {
             compatible = "zmk,behavior-macro";
             label = "Run Test Macro";
+            #binding-cells = <0>;
             bindings = <
                 &mt LCTRL R
                 &mt LCTRL T
@@ -84,6 +90,7 @@
         debug_test_macro: debug_test_macro {
             compatible = "zmk,behavior-macro";
             label = "Debug Test Macro";
+            #binding-cells = <0>;
             bindings = <
                 &mt LCTRL R
                 &mt LCTRL D
@@ -92,6 +99,7 @@
         find_refs_macro: find_refs_macro {
             compatible = "zmk,behavior-macro";
             label = "Find All References";
+            #binding-cells = <0>;
              bindings = <
                 &mt LSHFT F12
             >;
@@ -100,6 +108,7 @@
         rename_macro: rename_macro {
             compatible = "zmk,behavior-macro";
             label = "Rename Symbol";
+            #binding-cells = <0>;
             bindings = <
                      &mt LCTRL R
                      &mt LCTRL R
@@ -111,6 +120,7 @@
                 format_doc_macro: format_doc_macro {
                  compatible = "zmk,behavior-macro";
                  label = "Format Document";
+                 #binding-cells = <0>;
                   bindings = <
                     &mt LCTRL K
                        &mt LCTRL D
