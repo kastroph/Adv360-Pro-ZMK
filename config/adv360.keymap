@@ -190,7 +190,7 @@
                 &kp LSHFT       &kp RSHFT
                 AS(N)           AS(M)      AS(COMMA)  AS(DOT)    AS(FSLH)   AS(BACKSLASH)
 
-                &kp LG(RIGHT)   &kp LG(LEFT) &kp LG(DOT) &kp LA(SPACE) &kp LGUI
+                &mo VS  &kp LG(LEFT) &kp LG(DOT) &kp LA(SPACE) &kp LGUI
                 &lt LOWER SPACE   &kp BSPC    AS(TAB)     &kp LALT       &pht LCTRL ESC
                 &lt RAISE ENTER   &kp LG(TAB) &kp LC(LSHFT) &kp LBKT     &kp RBKT   &mo VS
             >;
@@ -228,7 +228,7 @@
                 &to LOWER   &none &none &none &none &none &none
                 &kp PG_UP   &none &none &kp UP &none &none &none
 
-                &to RAISE   &none &kp LALT &kp LSHFT &kp LCTRL &none &none
+                &to RAISE   &kp LGUI &kp LALT &kp LSHFT &kp LCTRL &none &none
                 &trans      &trans &trans &trans &kp PG_DN &kp HOME
                 &kp LEFT    &kp DOWN &kp RIGHT &kp END &none
 
