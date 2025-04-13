@@ -29,14 +29,14 @@
 / {
 
  macros {
-        extract_method_macro: extract_method_macro {
+         extract_method_macro: extract_method_macro {
             compatible = "zmk,behavior-macro";
-            label = "Extract Method Macro";
             #binding-cells = <0>;
+            wait-ms = <50>;
+            tap-ms = <40>;
             bindings = <
-                &mt LCTRL R
-                
-                &mt LCTRL M
+                &macro_tap &kp LC(R)
+                &macro_tap &kp LC(M)
             >;
         };
 
