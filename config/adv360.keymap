@@ -15,18 +15,116 @@
 #define RAISE   2
 #define FN      3
 #define MOD     4
-#define NONAS   5
-#define VS      6
+#define VS      5
+#define closeWindow &mt LCTRL F4
 
 &lt {
     tapping-term-ms = <200>;
 };
 
+&sl {
+    release-after-ms = <2000>;
+};
+
 / {
+
+ macros {
+        extract_method_macro: extract_method_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Extract Method Macro";
+            bindings = <
+                &mt LCTRL R
+                &mt LCTRL M
+            >;
+        };
+
+          comment_macro: comment_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Comment Macro";
+            bindings = <
+                &mt LCTRL K
+                &mt LCTRL C
+            >;
+        };
+
+        uncomment_macro: uncomment_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Uncomment Macro";
+            bindings = <
+                &mt LCTRL K
+                &mt LCTRL U
+            >;
+        };
+        nav_back_macro: nav_back_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Navigate Back";
+            bindings = <
+                &mt LCTRL MINUS
+            >;
+        };
+
+        nav_forward_macro: nav_forward_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Navigate Forward";
+            bindings = <
+                &mt LSFT MINUS
+                &mt LCTRL MINUS
+            >;
+        };
+
+        run_test_macro: run_test_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Run Test Macro";
+            bindings = <
+                &mt LCTRL R
+                &mt LCTRL T
+            >;
+        };
+
+        debug_test_macro: debug_test_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Debug Test Macro";
+            bindings = <
+                &mt LCTRL R
+                &mt LCTRL D
+            >;
+        };
+        find_refs_macro: find_refs_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Find All References";
+             bindings = <
+                &mt LSHFT F12
+            >;
+        };
+
+        rename_macro: rename_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Rename Symbol";
+            bindings = <
+                     &mt LCTRL R
+                     &mt LCTRL R
+                    >;
+                };
+
+    
+
+                format_doc_macro: format_doc_macro {
+                 compatible = "zmk,behavior-macro";
+                 label = "Format Document";
+                  bindings = <
+                    &mt LCTRL K
+                       &mt LCTRL D
+                      >;
+                    };
+
+    };
+
+
     behaviors {
         #include "macros.dtsi"
         #include "version.dtsi"  
         
+
 
 
         hm: homerow_mods {
@@ -68,7 +166,7 @@
 
         default_layer {
             bindings = <
-                &mo 5 &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &mo MOD
+                &none &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &mo MOD
                 &kp LA(PSCRN)   &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
 
                 &kp ASTRK       AS(Q)      AS(W)      AS(E)      AS(R)      AS(T)     &kp DEL
@@ -180,17 +278,15 @@
         vs {
             display-name = "VS";
             bindings = <
-                &none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &mo MOD
-                &kp LA(PSCRN) &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+                &none          &kp F1      &kp F2      &kp F3      &kp F4               &run_test_macro &mo MOD        &kp LA(PSCRN) &debug_test_macro &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
 
-                &kp LC(LA(F4)) &kp LC(F4) &kp LA(F12) &kp LC(F12) &none &none &none
-                &kp AMPS AS(Y) AS(U) AS(I) AS(O) AS(P) &kp F12
+                &kp LC(LA(F4)) closeWindow &kp LA(F12) &kp LC(F12) &extract_method_macro  &none          &none          &kp AMPS      &find_refs_macro            AS(U)  AS(I) AS(O) AS(P) &kp F12
 
-                &none &none &kp F12 &kp LC(F12) &none &none &none
-                &none &none &none &none AS(H) AS(J) AS(K) AS(L) AS(SEMI) AS(SQT)
+                &none          &none      &kp F12      &kp LC(F12) &none      &none &none
+                &none &none &none &none AS(H) &nav_back_macro &nav_forward_macro AS(L) AS(SEMI) AS(SQT)
 
-                &none &none &none &none &none &none
-                &none &none AS(N) AS(M) AS(COMMA) AS(DOT) AS(FSLH) AS(BACKSLASH)
+                &none &comment_macro &uncomment_macro  &none &format_doc_macro &none
+                &none &none AS(N) &none &none &none &none &none
 
                 &none &none &none &none &none
                 &trans &none &none &none &trans &trans
