@@ -35,7 +35,7 @@
             #binding-cells = <0>;
             bindings = <
                 &mt LCTRL R
-                &delay-ms 50
+                
                 &mt LCTRL M
             >;
         };
@@ -46,7 +46,7 @@
             #binding-cells = <0>;
             bindings = <
                 &mt LCTRL K
-                &delay-ms 50
+               
                 &mt LCTRL C
             >;
         };
@@ -57,7 +57,7 @@
             #binding-cells = <0>;
             bindings = <
                 &mt LCTRL K
-                &delay-ms 50
+             
                 &mt LCTRL U
             >;
         };
@@ -76,7 +76,7 @@
             #binding-cells = <0>;
             bindings = <
                 &mt LSFT MINUS
-                &delay-ms 50
+              
                 &mt LCTRL MINUS
             >;
         };
@@ -87,7 +87,7 @@
             #binding-cells = <0>;
             bindings = <
                 &mt LCTRL R
-                &delay-ms 50
+             
                 &mt LCTRL T
             >;
         };
@@ -98,7 +98,7 @@
             #binding-cells = <0>;
             bindings = <
                 &mt LCTRL R
-                &delay-ms 50
+          
                 &mt LCTRL D
             >;
         };
@@ -117,7 +117,7 @@
             #binding-cells = <0>;
             bindings = <
                      &mt LCTRL R
-                     &delay-ms 50
+                     
                      &mt LCTRL R
                     >;
                 };
@@ -130,7 +130,7 @@
                  #binding-cells = <0>;
                   bindings = <
                     &mt LCTRL K
-                    &delay-ms 50
+                
                        &mt LCTRL D
                       >;
                     };
