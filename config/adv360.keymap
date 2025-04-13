@@ -12,9 +12,8 @@
 
 #define DEFAULT 0
 #define LOWER   1
-#define RAISE   2
-#define FN      3
-#define MOD     4
+#define FN      2
+#define MOD     3
 #define VS      5
 #define closeWindow &mt LCTRL F4
 
