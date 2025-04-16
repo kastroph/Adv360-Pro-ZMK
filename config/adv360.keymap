@@ -16,7 +16,7 @@
 #define FN      2
 #define MOD     3
 #define VS      5
-#define closeWindow &mt LCTRL F4
+#define closeWindow &kp LCTRL(F4)
 
 &lt {
     tapping-term-ms = <200>;
