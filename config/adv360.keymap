@@ -11,12 +11,12 @@
 
 
 #define DEFAULT 0
-#define SaNPad  1
+#define LOWER   1
 #define RAISE   2
 #define FN      2
 #define MOD     3
 #define VS      5
-#define closeWindow &kp LCTRL(F4)
+#define closeWindow &kp LC(F4)
 
 &lt {
     tapping-term-ms = <200>;
@@ -188,52 +188,45 @@
 
         default_layer {
             bindings = <
-                &none &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &sl VS                                                                                     &kp LA(PSCRN)   &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
+                &none &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &sl VS                                                                                            &kp LA(PSCRN)   &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
+        
+                &kp ASTRK       AS(Q)      AS(W)      AS(E)      AS(R)      AS(T)     &kp DEL                                                                                  &kp AMPS        AS(Y)      AS(U)      AS(I)      AS(O)      AS(P)     &kp F12
+        
+                AS(MINUS)       AS(A)      AS(S)      AS(D)      AS(F)      AS(G)     &mkp RCLK      &kp LCTRL   &kp LALT        &kp PG_DN  &kp PG_UP                         AS(EQUAL)        AS(H)      AS(J)      AS(K)      AS(L)      AS(SEMI)   AS(SQT)
+        
+                &caps_word      AS(Z)      AS(X)      AS(C)      AS(V)      AS(B)                                &kp LSHFT       &kp RSHFT                                                    AS(N)       AS(M)      AS(COMMA)  AS(DOT)    AS(FSLH)   AS(BACKSLASH)
 
-                &kp ASTRK       AS(Q)      AS(W)      AS(E)      AS(R)      AS(T)     &kp DEL                                                                           &kp AMPS        AS(Y)      AS(U)      AS(I)      AS(O)      AS(P)     &kp F12
-
-                AS(MINUS)       AS(A)      AS(S)      AS(D)      AS(F)      AS(G)     &mkp RCLK      &kp LCTRL  &kp LALT   &kp PG_DN  &kp PG_UP                         AS(EQUAL)       AS(H)      AS(J)     AS(K)       AS(L)     AS(SEMI)   AS(SQT)
-
-                &caps_word      AS(Z)      AS(X)      AS(C)      AS(V)      AS(B                                &kp LSHFT  &kp RSHFT                                                    AS(N)     AS(M)      AS(COMMA)  AS(DOT)    AS(FSLH)   AS(BACKSLASH)
-
-                &mo VS  &kp LG(LEFT) &kp LG(DOT) &kp LA(SPACE) &kp LGUI           &lt SaNPad SPACE   &kp BSPC    AS(TAB)     &kp LALT   &pht LCTRL ESC &lt RAISE ENTER   &kp LG(TAB)     &kp LC(LSHFT)    &kp LBKT     &kp RBKT   &mo VS
+                &mo VS  &kp LG(LEFT) &kp LG(DOT) &kp LA(SPACE) &kp LGUI             &lt LOWER SPACE   &kp BSPC   AS(TAB)         &kp LALT   &pht LCTRL ESC  &lt RAISE ENTER                   &kp LG(TAB)  &kp LC(LSHFT) &kp LBKT     &kp RBKT        &mo VS
             >;
         };
 
         keypad {
             display-name = "Kp";
             bindings = <
-                &to DEFAULT   &kp N1     &kp N2   &kp N3   &none   &none   &none                                                                                         &none         &none     &none    &none    &none   &kp KP_MULTIPLY &kp MINUS
+            &to DEFAULT   &kp N1     &kp N2   &kp N3   &none   &none   &none                                                                                                    &none         &none     &none    &none    &none   &kp KP_MULTIPLY &kp MINUS
 
-                &to LOWER     &kp EXCL   &kp AT   &kp LBRC &kp RBRC &kp PIPE  &trans                                                                                     &none         &none     &kp N7   &kp N8   &kp N9   &kp KP_MINUS   &kp BSLH
+                &to LOWER     &kp EXCL   &kp AT   &kp LBRC &kp RBRC &kp PIPE  &trans                                                                                            &none         &none     &kp N7   &kp N8   &kp N9   &kp KP_MINUS   &kp BSLH
 
-                &to RAISE     &kp HASH  &kp DOLLAR &kp LPAR &kp RPAR &kp GRAVE &trans   &trans        &trans    &trans          &trans   &none                                         &none      &kp N4  &kp N5  &kp N6    &kp KP_PLUS    &kp SQT
+                &to RAISE     &kp HASH  &kp DOLLAR &kp LPAR &kp RPAR &kp GRAVE &trans                  &trans   &trans             &trans     &trans                            &none         &none      &kp N4  &kp N5  &kp N6    &kp KP_PLUS     &kp SQT
 
-                &to FN        &kp PRCNT &kp CARET &kp LBKT &kp RBKT &kp TILDE2 &trans                           &trans           &none                                                              &kp N1    &kp N2    &kp N3   &kp ENTER &none
+                &to FN        &kp PRCNT &kp CARET &kp LBKT &kp RBKT &kp TILDE2                                  &trans             &trans                                                    &none       &kp N1    &kp N2  &kp N3   &kp ENTER      &none
 
-                &to VS        &trans    &trans   &trans   &trans                                    &trans    &trans             &trans   &trans                                      &trans  &none  &kp N0    &kp KP_DOT  &none           &none
+                &to VS        &trans    &trans   &trans    &trans                                     &trans    &trans             &trans   &trans    &trans                                   &none    &kp N0      &kp KP_DOT    &none         &none
             >;
         };
 
         fn {
             display-name = "Fn";
             bindings = <
-                &to DEFAULT &none &none &none &none &none &to MOD
-                &none       &none &none &none &none &none &none
+                &to DEFAULT &none &none &none &none &none &to MOD                                                                                                               &none       &none &none &none &none &none &none
 
-                &to LOWER   &none &none &none &none &none &none
-                &kp PG_UP   &none &none &kp UP &none &none &none
+                &to LOWER   &none &none &none &none &none &none                                                                                                                 &kp PG_UP   &none &none &kp UP &none &none &none
 
-                &to RAISE   &kp LGUI &kp LALT &kp LSHFT &kp LCTRL &none &none
-                &trans      &trans &trans &trans &kp PG_DN &kp HOME
-                &kp LEFT    &kp DOWN &kp RIGHT &kp END &none
+                &to RAISE   &kp LGUI &kp LALT &kp LSHFT &kp LCTRL &none &none                        &trans      &trans              &trans &trans                               &kp PG_DN &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END &none
 
-                &to FN      &none &kp LC(X) &kp LC(C) &kp LC(V) &none
-                &trans      &trans &none &none &none &none &none
+                &to FN      &none &kp LC(X) &kp LC(C) &kp LC(V) &none                                            &trans              &trans                                                     &none &none &none &none &none
 
-                &to VS      &none &none &none &none &trans
-                &trans      &trans &trans &trans &trans
-                &none       &none &none &none &none
+                &to VS      &none &none &none &none &trans                                  &trans      &trans &trans               &trans &trans                                       &none       &none &none &none &none
             >;
         };
 
@@ -284,19 +277,15 @@
         vs {
             display-name = "VS";
             bindings = <
-                &none          &kp F1      &kp F2      &kp F3      &kp F4               &run_test_macro &mo MOD        &kp LA(PSCRN) &debug_test_macro &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+                &none          &kp F1      &kp F2      &kp F3      &kp F4               &run_test_macro &mo MOD                                                       &kp LA(PSCRN) &debug_test_macro &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
 
-                &kp LC(LA(F4)) closeWindow &kp LA(F12) &kp LC(F12) &extract_method_macro  &none          &none          &kp AMPS      &find_refs_macro   AS(U)  AS(I) AS(O) AS(P) &kp F12
+                &kp LC(LA(F4)) closeWindow &kp LA(F12) &kp LC(F12) &extract_method_macro  &none          &none                                                        &kp AMPS      &find_refs_macro  AS(U)  AS(I) AS(O)   AS(P)   &kp F12
 
-                &none          &none      &kp F12      &kp LC(F12) &none      &none &none
-                &none &none &none &none &none &nav_back_macro &nav_forward_macro &none AS(SEMI) AS(SQT)
+                &none          &none      &kp F12      &kp LC(F12) &none      &none &none                                        &none &none &none                    &none         AS(H) &nav_back_macro &nav_forward_macro AS(L) AS(SEMI) AS(SQT)
 
-                &none &comment_macro &uncomment_macro  &none &format_doc_macro &none
-                &none &none &kp V &none &none &none &none &none
+                &none &comment_macro &uncomment_macro  &none &format_doc_macro &none                                              &none &none                                        &kp N &none &none &none &none &none
 
-                &none &none &none &none &none
-                &trans &none &none &none &trans &trans
-                &none &none &none &none &none
+                &none &none &none &none &none                                                                        &trans &none &none &none &trans &trans                           &none &none &none &none &none
             >;
         };
     };
