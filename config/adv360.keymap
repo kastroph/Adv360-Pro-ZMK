@@ -205,9 +205,9 @@
             bindings = <
             &to DEFAULT   &kp N1     &kp N2   &kp N3   &none   &none   &none                                                                                                    &none         &none     &none    &none    &none   &kp KP_MULTIPLY &kp MINUS
 
-                &to LOWER     &kp EXCL   &kp AT   &kp LBRC &kp RBRC &kp PIPE  &trans                                                                                            &none         &none     &kp N7   &kp N8   &kp N9   &kp KP_MINUS   &kp BSLH
+                &to LOWER     &kp EXCL   &kp AT   &kp LBRC &kp RBRC &kp PIPE  &trans                                                                                           &kp AMPS       &none     &kp N7   &kp N8   &kp N9   &kp KP_MINUS   &kp BSLH
 
-                &to RAISE     &kp HASH  &kp DOLLAR &kp LPAR &kp RPAR &kp GRAVE &trans                  &trans   &trans             &trans     &trans                            &none         &none      &kp N4  &kp N5  &kp N6    &kp KP_PLUS     &kp SQT
+                &to RAISE     &kp HASH  &kp DOLLAR &kp LPAR &kp RPAR &kp GRAVE &trans                  &trans   &trans             &trans     &trans                           AS(EQUAL)          &none      &kp N4  &kp N5  &kp N6    &kp KP_PLUS     &kp SQT
 
                 &to FN        &kp PRCNT &kp CARET &kp LBKT &kp RBKT &kp TILDE2                                  &trans             &trans                                                    &none       &kp N1    &kp N2  &kp N3   &kp ENTER      &none
 
@@ -220,9 +220,9 @@
             bindings = <
                 &to DEFAULT &none &none &none &none &none &to MOD                                                                                                               &none       &none &none &none &none &none &none
 
-                &to LOWER   &none &none &none &none &none &none                                                                                                                 &kp PG_UP   &none &none &kp UP &none &none &none
+                &to LOWER   &none &none &none &none &none &none                                                                                                                 &kp AMPS    &none &none &kp UP &none &none &none
 
-                &to RAISE   &kp LGUI &kp LALT &kp LSHFT &kp LCTRL &none &none                        &trans      &trans              &trans &trans                               &kp PG_DN &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END &none
+                &to RAISE   &kp LGUI &kp LALT &kp LSHFT &kp LCTRL &none &none                        &trans      &trans              &trans &trans                              AS(EQUAL)   &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END &none
 
                 &to FN      &none &kp LC(X) &kp LC(C) &kp LC(V) &none                                            &trans              &trans                                                     &none &none &none &none &none
 
